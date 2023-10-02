@@ -14,6 +14,9 @@
  */
 function nextInteger(int) {
   // write your code here & return value
+  // eslint-disable-next-line no-param-reassign
+  int += 1;
+  return int;
 }
 /**
  * Calculates the product of two numbers
@@ -22,7 +25,8 @@ function nextInteger(int) {
  * @returns {number} - The result of the multiplication
  */
 function times(a, b) {
-  // write your code here & return value
+  // write your code here & return value\
+  return a * b;
 }
 
 /**
@@ -32,6 +36,10 @@ function times(a, b) {
  */
 function convertMinutesToSeconds(minutes) {
   // write your code here & return value
+  // eslint-disable-next-line no-undef
+  seconds1 = minutes * 60;
+  // eslint-disable-next-line no-undef
+  return seconds1;
 }
 
 /**
@@ -41,6 +49,7 @@ function convertMinutesToSeconds(minutes) {
  */
 function convertHoursToSeconds(hours) {
   // write your code here & return value
+  return hours * 60 * 60;
 }
 
 module.exports = {
