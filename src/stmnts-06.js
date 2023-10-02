@@ -13,6 +13,10 @@
  */
 function isString(str) {
   // write your code here & return
+  if (typeof str === 'string') {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -22,6 +26,10 @@ function isString(str) {
  */
 function isBlank(str) {
   // write your code here & return
+  if (str === '') {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -34,6 +42,10 @@ function isBlank(str) {
  */
 function sayHelloOrBye(name, num) {
   // write your code here & return
+  if (num === 0) {
+    return (`Hello ${name}`);
+  }
+  return (`Bye ${name}`);
 }
 
 /**
@@ -45,6 +57,10 @@ function sayHelloOrBye(name, num) {
  */
 function compareStrings(str1, str2) {
   // write your code here & return
+  if (str1 === str2) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = {
