@@ -14,6 +14,10 @@
  */
 function logicalAnd(a, b) {
   // write your code here & return
+  if (a && b === true) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -24,6 +28,10 @@ function logicalAnd(a, b) {
  */
 function logicalOr(a, b) {
   // write your code here & return
+  if (a || b === true) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -33,6 +41,7 @@ function logicalOr(a, b) {
  */
 function invertBoolean(bool) {
   // write your code here & return
+  return !bool;
 }
 
 /**
@@ -50,6 +59,13 @@ function invertBoolean(bool) {
  */
 function numberOfOdds(num) {
   // write your code here & return
+  let count = 0;
+  for (let i = 0; i < num; i++) {
+    if (i % 2 === 1) {
+      count++;
+    }
+  }
+  return count;
 }
 
 /**
@@ -63,6 +79,11 @@ function numberOfOdds(num) {
  */
 function addUpTheNumbers(num) {
   // write your code here & return
+  let sum = 0;
+  for (let i = 0; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -82,6 +103,22 @@ function addUpTheNumbers(num) {
  */
 function gradeGenerator(score) {
   // write your code here & return
+  if (score < 60) {
+    return 'F';
+  }
+  if (score < 70) {
+    return 'D';
+  }
+  if (score < 80) {
+    return 'C';
+  }
+  if (score < 90) {
+    return 'B';
+  }
+  if (score <= 100) {
+    return 'A';
+  }
+  return 'Not a number';
 }
 
 /**
@@ -102,6 +139,26 @@ function gradeGenerator(score) {
  */
 function getGrade(name, score) {
   // write your code here & return
+  if (score < 60) {
+    const gotF = `${name} got an ${gradeGenerator(score)}`;
+    return gotF;
+  }
+  if (score < 70) {
+    const gotD = `${name} got a ${gradeGenerator(score)}`;
+    return gotD;
+  }
+  if (score < 80) {
+    const gotC = `${name} got a ${gradeGenerator(score)}`;
+    return gotC;
+  }
+  if (score < 90) {
+    const gotB = `${name} got a ${gradeGenerator(score)}`;
+    return gotB;
+  }
+  if (score >= 90) {
+    const gotA = `${name} got an ${gradeGenerator(score)}`;
+    return gotA;
+  }
 }
 
 module.exports = {
